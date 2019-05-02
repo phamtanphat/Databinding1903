@@ -1,38 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<layout>
+    <data>
+        <variable
+            name="user"
+            type="khoapham.ptp.phamtanphat.databinding1903.User"/>
+    </data>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-   <ImageView
-       android:src="@mipmap/ic_launcher"
-       android:id="@+id/imageview"
-       android:layout_centerHorizontal="true"
-       android:layout_width="250dp"
-       android:layout_height="250dp" />
-    <EditText
-        android:layout_marginTop="50dp"
-        android:hint="Nhập email"
-        android:id="@+id/edittextEmail"
-        android:layout_below="@id/imageview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:layout_marginTop="50dp"
-        android:hint="Nhập password"
-        android:id="@+id/edittextPassword"
-        android:layout_below="@id/edittextEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <Button
-        android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/edittextPassword"
-        android:text="Đăng nhập"
-        android:id="@+id/buttondangnhap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</RelativeLayout>
+        <ImageView
+            android:src="@{user.hinhanh}"
+            android:id="@+id/imageview"
+            android:layout_centerHorizontal="true"
+            android:layout_width="250dp"
+            android:layout_height="250dp" />
+        <EditText
+            android:text="@{user.email}"
+            android:layout_marginTop="50dp"
+            android:hint="Nhập email"
+            android:id="@+id/edittextEmail"
+            android:layout_below="@id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:text="@{user.password}"
+            android:layout_marginTop="50dp"
+            android:hint="Nhập password"
+            android:id="@+id/edittextPassword"
+            android:layout_below="@id/edittextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/edittextPassword"
+            android:text="Đăng nhập"
+            android:id="@+id/buttondangnhap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</layout>
+
