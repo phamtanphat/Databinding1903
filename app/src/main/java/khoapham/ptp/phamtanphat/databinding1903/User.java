@@ -17,6 +17,9 @@ public class User extends BaseObservable {
         this.hinhanh = hinhanh;
     }
 
+    public User() {
+    }
+
     @Bindable
     public String getEmail() {
         return email;

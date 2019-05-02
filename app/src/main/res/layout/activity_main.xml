@@ -20,7 +20,7 @@
             android:layout_width="250dp"
             android:layout_height="250dp" />
         <EditText
-            android:text="@{user.email}"
+            android:text="@={user.email}"
             android:layout_marginTop="50dp"
             android:hint="Nhập email"
             android:id="@+id/edittextEmail"
@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <EditText
-            android:text="@{user.password}"
+            android:text="@={user.password}"
             android:layout_marginTop="50dp"
             android:hint="Nhập password"
             android:id="@+id/edittextPassword"
