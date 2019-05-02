@@ -2,6 +2,10 @@ package khoapham.ptp.phamtanphat.databinding1903;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
+import android.databinding.BindingAdapter;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.android.databinding.library.baseAdapters.BR;
 
@@ -50,4 +54,17 @@ public class User extends BaseObservable {
         this.hinhanh = hinhanh;
         notifyPropertyChanged(BR.hinhanh);
     }
+    // su kien click button
+//    public void setOnClick(View view){
+//        Log.d("BBB","OnClick button");
+//    }
+//    public  void setonClick(){
+//        Log.d("BBB","onClick Button");
+//    }
+    //BindingAdapter
+    @BindingAdapter({"android:src"})
+    public static void setImageUrl(ImageView imageUrl , int hinhanh){
+        imageUrl.setImageResource(R.mipmap.ic_launcher);
+    }
+
 }
